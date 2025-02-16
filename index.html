@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Manahil <3 <3 <3 </title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #6a11cb, #2575fc, #ff4d6d);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .hidden {
+            display: none;
+        }
+        .message-box {
+            display: none;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            width: 70%;
+            max-width: 700px;
+            opacity: 0;
+            transition: opacity 2s ease-in-out, transform 1s ease-in-out;
+            transform: scale(0.5);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.3;
+            text-align: center;
+        }
+        .highlight {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffcc00;
+            text-shadow: 0px 0px 10px #ffcc00;
+        }
+        .big {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff4d6d;
+            text-shadow: 0px 0px 10px #ff4d6d;
+        }
+        .italic {
+            font-style: italic;
+            color: #ff99cc;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        button {
+            background: #ff4d6d;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 10px rgba(255, 77, 109, 0.7);
+            transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+            position: relative;
+        }
+        button:hover {
+            background: #ff1e4d;
+            box-shadow: 0px 0px 20px rgba(255, 77, 109, 0.9);
+            animation: pulse 1s infinite alternate;
+        }
+        button:active {
+            transform: scale(0.9);
+            animation: bounce 0.3s ease-in-out;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        @keyframes bounce {
+            0% { transform: scale(0.9); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .floating-balloons {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 70px;
+            background: red;
+            border-radius: 50%;
+            bottom: -100px;
+            animation: floatUp 6s linear infinite;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-120vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <audio id="birthdayAudio" loop>
+        <source src="https://raw.githubusercontent.com/Blocky150308/Happybirthdaymanahil/main/blue.mp3" type="audio/mpeg">
+    </audio>
+    
+    <button id="playMusic" onclick="playAudio()">Play Music</button>
+    
+    <script>
+        function playAudio() {
+            let audio = document.getElementById("birthdayAudio");
+            audio.play().then(() => {
+                document.getElementById("playMusic").style.display = "none"; // Hide button after play
+            }).catch(error => console.log("Playback failed:", error));
+        }
+    </script>
+
+    <div class="floating-balloons"></div>
+    <h1 id="heading">Click Below to Begin!</h1>
+    <button id="step1" onclick="nextStep(1)">Click Me</button>
+    
+    <div id="step2" class="hidden">
+        <h2>Are you ready?</h2>
+        <button onclick="nextStep(2)">Yes!</button>
+    </div>
+    
+    <div id="step3" class="hidden">
+        <h2>Sure? Click again!</h2>
+        <button onclick="nextStep(3)">I'm Sure!</button>
+    </div>
+    
+    <div id="finalMessage" class="message-box">
+        <p class="italic">HAII, I WAS WAITING FOR SO LONG FOR TODAY.</p>
+        <p class="big">HAPPY BIRTHDAYYYYY MANAHIL &lt;3333</p>
+        <p class="highlight">I HOPE YOU HAVE AN AMAZING AND I CANNOT THANK YOU ENOUGH FOR ALL THE AMAZING DAYS I'VE HAD BECAUSE OF YOU.</p>
+        <p class="big">YOU ARE AN AMAZING FRIEND AND I LOVE YOU SO MUCH AND I AM SO GLAD TO HAVE U IN MY LIFE AS MY BEST FRIEND.</p>
+        <p class="italic">Also, I don't say this enough, but you're like really pretty :3</p>
+        <p class="highlight">I CANT WAIT TO GET YOU FLOWERS ONE DAY</p>
+        <p class="big">I really hope we stay best friends for a long time. FOREVER IDC.</p>
+        <p class="highlight">YOURE THE BEST &lt;3333</p>
+        <p class="big">I LOVE YOU SO MUCHH</p>
+        <p class="italic">MY BEST FRIEND FRFR HEHEHEHEHEHE &lt;333333333</p>
+        <p class="big">HAPPY BIRTHDAYY ONCE MORE &lt;33</p>
+        <p class="italic" style="color: #ff99cc; text-shadow: 0px 0px 5px #ff99cc;">Ill always be here to teach you maths <3</p>
+        <style>
+            .flower {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: pink;
+            border-radius: 50%;
+            bottom: -100px;
+            animation: floatUp 8s linear infinite;
+            box-shadow: 0 0 10px rgba(255, 192, 203, 0.7);
+        }
+        .flower::before, .flower::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: pink;
+            border-radius: 50%;
+        }
+        .flower::before {
+            top: -15px;
+            left: 0;
+        }
+        .flower::after {
+            top: 0;
+            left: -15px;
+            }
+        </style>
+    </div>
+    
+    <script>
+        function nextStep(step) {
+            if (step === 1) {
+                document.getElementById('step1').style.display = 'none';
+                document.getElementById('heading').style.display = 'none';
+                document.getElementById('step2').classList.remove('hidden');
+            } else if (step === 2) {
+                document.getElementById('step2').style.display = 'none';
+                document.getElementById('step3').classList.remove('hidden');
+            } else if (step === 3) {
+                document.getElementById('step3').style.display = 'none';
+                let msg = document.getElementById('finalMessage');
+                msg.style.display = 'block';
+                setTimeout(() => {
+                    msg.style.opacity = '1';
+                    msg.style.transform = 'scale(1)';
+                }, 500);
+            }
+        }
+        function createBalloons() {
+            const container = document.querySelector('.floating-balloons');
+            for (let i = 0; i < 15; i++) {
+                let balloon = document.createElement('div');
+                balloon.classList.add('balloon');
+                balloon.style.left = Math.random() * 100 + 'vw';
+                balloon.style.background = `hsl(${Math.random() * 360}, 100%, 60%)`;
+                balloon.style.animationDuration = Math.random() * 3 + 3 + 's';
+                container.appendChild(balloon);
+            }
+        }
+        createBalloons();
+        function createFlowers() {
+            const container = document.querySelector('.floating-balloons');
+            for (let i = 0; i < 10; i++) {
+                let flower = document.createElement('div');
+                flower.classList.add('flower');
+                flower.style.left = Math.random() * 100 + 'vw';
+                flower.style.background = `hsl(${Math.random() * 360}, 100%, 70%)`;
+                flower.style.animationDuration = Math.random() * 3 + 3 + 's';
+                container.appendChild(flower);
+            }
+        }
+
+        createFlowers();
+    </script>
+</body>
+</html>
